@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Audiowide&family=Cairo:wght@200..1000&family=Emilys+Candy&family=Faculty+Glyphic&family=Figtree:ital,wght@0,300..900;1,300..900&family=Galdeano&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kirang+Haerang&family=Merienda:wght@300..900&family=Outfit:wght@100..900&family=Pacifico&family=Permanent+Marker&family=Rock+Salt&family=Ruge+Boogie&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Twinkle+Star&family=Young+Serif&family=Zen+Dots&display=swap"
+    rel="stylesheet">
+
+    <title> Calculator App </title>
+</head>
+<body>
+
+    <div class="toggleBtn">
+        <div class="defaultTheme btn"></div>
+        <div class="pinkTheme btn"></div>
+        <div class="darkTheme btn"></div>
+    </div>
+    <main>
+    
+        <div class="historybar none">
+            <p>History</p>
+            <ul id="history-list">
+
+            </ul>
+            
+            <button type="button" id="deleteAll">
+                <i class="fa-regular fa-trash-can"></i> delete All 
+            </button>
+            <button type="button" id="back">
+            <i class="fa-solid fa-arrow-left"></i>
+            </button>
+        </div>
+
+        <table class="calculator">
+          
+            <thead>
+               
+                <td colspan="4">
+                    <div class="input-container">
+                        
+                        <textarea  
+                        type="text" 
+                        id="result"></textarea>
+                      
+                        <div id="inputOper" contenteditable="true" class="input-style"></div>
+
+                        <i id="delete" class="fa-solid fa-delete-left"></i> 
+                       
+                    </div>
+
+                </td>
+            </thead>
+
+            <tbody class="number">
+                    <tr>
+                        <td><button 
+                            type="button" 
+                            value="c"
+                            id="clear">c</td>
+
+                    
+                        <td><button
+                            type="button"
+                            id="history">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            </button></td>
+
+                            <td><button 
+                                type="button" 
+                                id="percent"
+                                value="%"
+                                class="operation"><!--%-->
+                                    <i class="fa-solid fa-percent"></i>
+                                </button></td>
+
+                        <td><button 
+                            type="button"
+                            id="divide"
+                            value="÷"
+                            class="operation">
+                                <i class="fa-solid fa-divide"></i><!--/-->
+                            </button></td>    
+                    </tr>
+                            
+                    <tr>
+                        <td><button 
+                            type="button" 
+                            value="7"
+                            id="seven">7</td>
+
+                        <td><button 
+                            type="button" 
+                            value="8"
+                            id="eight">8</td>
+
+                        <td><button 
+                            type="button" 
+                            value="9"
+                            id="nine">9</td>
+
+                    <td><button 
+                        type="button"
+                        id="multiply"
+                        value="×"
+                        class="operation"><!-- x -->
+                                <i class="fa-solid fa-xmark"></i>
+                            </button></td>
+                        
+                    </tr>
+
+                    <tr>
+                        <td><button 
+                            type="button" 
+                            value="4"
+                            id="four">4</td>
+
+                        <td><button 
+                            type="button" 
+                            value="5"
+                            id="five">5</td>
+
+                        <td><button 
+                            type="button" 
+                            value="6"
+                            id="six">6</td>
+
+                        <td><button 
+                            type="button"
+                            id="minus"
+                            value="-"
+                            class="operation">
+                                <i class="fa-solid fa-minus"></i><!--(-)-->
+                            </button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button 
+                            type="button" 
+                            value="3"
+                            id="three">3</td>
+
+                        <td><button 
+                            type="button" 
+                            value="2"
+                            id="two">2</td>
+                        
+                        <td><button 
+                            type="button" 
+                            value="1"
+                            id="one">1</td>
+                        
+                        <td><button 
+                            type="button"
+                            id="add"
+                            value="+"
+                            class="operation">
+                                <i class="fa-solid fa-plus"></i><!-- + -->
+                            </button></td>
+                    </tr>
+
+                    <tr>
+                        <td><button 
+                            type="button" 
+                            value="0"
+                            id="zero">0</td>    
+                        
+                        <td><button 
+                            type="button" 
+                            value="."
+                            id="fraction">.</td>
+                        
+                    <td colspan="2"><button
+                        type="button"
+                        id="equals"
+                        class="operation">
+                            <i class="fa-solid fa-equals"></i><!--=-->
+                        </button></td>
+
+                        
+                    </tr>
+                
+            </tbody>   
+
+        </table>
+        
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>
