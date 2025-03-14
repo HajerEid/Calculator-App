@@ -443,9 +443,18 @@ body.dark {
     color: #064663;
 }
 
-@media (max-width:640px) {
+@media (max-width:900px) {
+    main{
+        width: 100%;
+    }
     .calculator,
     .historybar{
-    width: 90%;
+    width: 50%;
    } 
+}
+@media (max-width:600px) {
+    .calculator,
+    .historybar {
+        width: 90%;
+    }
 }
